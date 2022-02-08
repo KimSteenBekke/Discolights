@@ -1,0 +1,18 @@
+{{!-- views/albums/album-list.hbs --}}
+
+<h1>Albums</h1>
+
+{{!-- since we passed allTheAlbumsFromDB as `albums`,
+we can iterate over it here with #each--}}
+
+{{#each albums}}
+  <div>
+    <h3>{{title}}</h3>
+    <p>Artist: {{artist}}</p> {{!-- additional album property --}}
+    <a href="/albums/{{_id}}">See details</a> {{!-- link that points to the details page --}}
+     <a href="/albums/{{_id}}/edit">Edit</a> {{!-- link to redirect to the edit form for each specific album  --}}
+     <form action="/albums/{{_id}}/delete" method="POST">
+      <button>Delete</button>
+    </form>
+  </div>
+{{/each}}
