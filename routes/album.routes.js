@@ -4,11 +4,12 @@ const express = require('express');
 const router = express.Router();
 const Album = require('../models/Album.model.js');
 const isLoggedIn = require("../middleware/isLoggedIn");
+const isLoggedOut = require("../middleware/isLoggedOut");
 
 // GET route to display the form to create a new album
 router.get("/albums/create", isLoggedIn, (req, res) =>
   res.render("albums/album-create.hbs")
-  );
+);
 
 router.post('/albums/create', (req, res, next) => {
     const { title, artist, label, genre, tracks } = req.body;
@@ -48,15 +49,15 @@ router.get("/albums", (req, res, next) => {
       });
   });
 
-  router.get('/albums/:albumId/edit', (req, res, next) => {
+  router.get("/albums/:albumId/edit", isLoggedIn, (req, res, next) => {
     const { albumId } = req.params;
-   
+
     Album.findById(albumId)
-      .then(albumToEdit => {
+      .then((albumToEdit) => {
         // console.log(albumToEdit);
-        res.render('albums/album-edit.hbs', { album: albumToEdit }); // <-- add this line
+        res.render("albums/album-edit.hbs", { album: albumToEdit }); // <-- add this line
       })
-      .catch(error => next(error));
+      .catch((error) => next(error));
   });
 
   router.post('/albums/:albumId/edit', (req, res, next) => {
@@ -69,12 +70,12 @@ router.get("/albums", (req, res, next) => {
   });
 
 
-  router.post('/albums/:albumId/delete', (req, res, next) => {
+  router.post("/albums/:albumId/delete", isLoggedIn, (req, res, next) => {
     const { albumId } = req.params;
-   
+
     Album.findByIdAndDelete(albumId)
-      .then(() => res.redirect('/albums'))
-      .catch(error => next(error));
+      .then(() => res.redirect("/albums"))
+      .catch((error) => next(error));
   });
 
 module.exports = router;
