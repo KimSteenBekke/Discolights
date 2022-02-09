@@ -3,9 +3,12 @@
 const express = require('express');
 const router = express.Router();
 const Album = require('../models/Album.model.js');
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 // GET route to display the form to create a new album
-router.get('/albums/create', (req, res) => res.render('albums/album-create.hbs'));
+router.get("/albums/create", isLoggedIn, (req, res) =>
+  res.render("albums/album-create.hbs")
+  );
 
 router.post('/albums/create', (req, res, next) => {
     const { title, artist, label, genre, tracks } = req.body;
@@ -16,21 +19,21 @@ router.post('/albums/create', (req, res, next) => {
    
 // GET route to retrieve and display all the albums
 
-router.get('/albums', (req, res, next) => {
-    Album.find()
-      .then(allTheAlbumsFromDB => {
-        // -> allTheAlbumsFromDB is a placeholder, it can be any word
-        console.log('Retrieved albums from DB:', allTheAlbumsFromDB);
-   
-        res.render('albums/album-list.hbs', { albums: allTheAlbumsFromDB });
-      })
-      .catch(error => {
-        console.log(`Error while getting the albums from the DB: ', ${error}`);
-   
-        // Call the error-middleware to display the error page to the user
-        next(error);
-      });
-  });
+router.get("/albums", (req, res, next) => {
+  Album.find()
+    .then((allTheAlbumsFromDB) => {
+      // -> allTheAlbumsFromDB is a placeholder, it can be any word
+      console.log("Retrieved albums from DB:", allTheAlbumsFromDB);
+
+      res.render("albums/album-list.hbs", { albums: allTheAlbumsFromDB });
+    })
+    .catch((error) => {
+      console.log(`Error while getting the albums from the DB: ', ${error}`);
+
+      // Call the error-middleware to display the error page to the user
+      next(error);
+    });
+});
 
   router.get('/albums/:albumId', (req, res, next) => {
     const { albumId } = req.params;
