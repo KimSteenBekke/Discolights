@@ -1,5 +1,5 @@
 {
-  "name": "DiscoLights",
+  "name": "discolights",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -21,8 +21,7 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
- "engines": {
-
-"node": "16.x" 
-} 
+  "engines": {
+    "node": "16.x" 
+  } 
 }
