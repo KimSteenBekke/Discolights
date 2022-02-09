@@ -28,7 +28,7 @@ const index = require("./routes/index");
 app.use("/", index);
 
 const authRoutes = require("./routes/auth");
-app.use("/auth", authRoutes);
+app.use("/", authRoutes);
 
 const albumRouter = require('./routes/album.routes'); 
 app.use('/', albumRouter);
