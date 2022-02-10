@@ -1,23 +1,44 @@
 {{!-- views/albums/album-edit.hbs --}}
 
+<br>
 <h2>Edit the album: {{album.title}}</h2>
+<br>
 
 <form action="/albums/{{album._id}}/edit" method="post">
-  <label> Title:
-    <input type="text" name="title" value="{{album.title}}" />
-  </label>
+    <div class="container">
 
-  <label> Artist:
-    <input type="text" name="artist" value="{{album.artist}}" />
-  </label>
+        <div class="row">
+            <label> <h4>Title:</h4>
+                <input type="text" name="title" value="{{album.title}}" />
+            </label>
+        </div>
+        <br><br>
 
-  <label> Label:
-    <input type="text" name="label" value="{{album.label}}" />
-  </label>
+  
+        <div class="row">
+            <label> <h4>Artist:</h4>
+                <input type="text" name="artist" value="{{album.artist}}" />
+            </label>
+        </div>
+        <br><br>
 
-  <label> Genre:
-    <input type="text" name="genre" value="{{album.genre}}" />
-  </label>
+        <div class="row"></div>
+            <label> <h4>Label:</h4>
+                <input type="text" name="label" value="{{album.label}}" />
+            </label>
+        </div>
+        <br><br>
 
-  <button>Save changes</button>
+        <div class="row"></div>
+            <label> <h4>Genre:</h4>
+                <input type="text" name="genre" value="{{album.genre}}" />
+            </label>
+        </div>
+        <br><br><br>
+
+        <div>
+            <button>Save changes</button>
+        </div>
+    </div>
+  
 </form>
