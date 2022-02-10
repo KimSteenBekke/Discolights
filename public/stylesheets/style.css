@@ -10,3 +10,11 @@ a {
 h1 {
   color: 15px;
 }
+
+.col-1 {
+max-width: fit-content
+}
+
+.col-1 * {
+width: 60px;
+}
