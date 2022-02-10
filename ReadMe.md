@@ -2,7 +2,7 @@
 
 ##**Description of the project:**
 
-DiscoLights is a database that lets you store your records (albums). You can get a list of existing albums without signing in, but to create, edit or delete albums, you must be registered and signed in.
+DiscoLights is a database that lets you store your records (albums). You can get a list of existing albums without signing in. But to create, edit or delete albums, you must be registered and signed in.
 
 ##**Wireframes:**
 
@@ -27,6 +27,12 @@ No setup or installation is required to run the app in a browser.
 
 ##**Technologies Used:**
 
+Express.js
+Mongoose.js
+CSS
+Bootstrap
+Handlebars
+
 ##**Models:**
 
 1.	User.model.js
@@ -47,7 +53,11 @@ https://discolights.herokuapp.com/
 1.	Label model
 2.	Genre model
 3.	Tracks model
-4.	Collection by user
+4.	Album Collection by user
+5.  Album image upload
+6.  Implement Discogs API
+7.  Session expire 
+8.  Display logged in user name
 
 ##**Resources:**
 
@@ -55,3 +65,8 @@ https://discolights.herokuapp.com/
 
 Peter Ravnsbæk
 Kim Steen Bekke
+
+##**Yedi-tricks and mentoring:**
+
+Kim Hansen (LE)
+Johny Woller Skovdal
