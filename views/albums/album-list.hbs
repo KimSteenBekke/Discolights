@@ -1,29 +1,64 @@
 {{!-- views/albums/album-list.hbs --}}
-{{!-- Navigation bar --}}
-
-
-
-
-
-
-
-
-
-
-
-<h1>Albums</h1>
+{{!-- general nav bar settings from layout.hbs --}}
+<br>
+<h1>List of all albums</h1>
+<br>
 
 {{!-- since we passed allTheAlbumsFromDB as `albums`,
 we can iterate over it here with #each--}}
 
-{{#each albums}}
-  <div>
-    <h3>{{title}}</h3>
-    <p>Artist: {{artist}}</p> {{!-- additional album property --}}
-    <a href="/albums/{{_id}}">See details</a> {{!-- link that points to the details page --}}
-     <a href="/albums/{{_id}}/edit">Edit</a> {{!-- link to redirect to the edit form for each specific album  --}}
-     <form action="/albums/{{_id}}/delete" method="POST">
-      <button>Delete</button>
-    </form>
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <h3>Title</h3>
+    </div>
+    <div class="col">
+      <h3>Artist</h3>
+    </div>
+    <div class="col">
+      <h3>Label</h3>
+    </div>
+    <div class="col">
+      <h3>Genre</h3>
+    </div>
+    <div class="col-3">
+      <h3>action</h3>
+    </div>
   </div>
+</div>
+
+
+
+{{#each albums}}
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <h5>{{title}}</h5>
+        </div>
+        <div class="col">
+            <p>{{artist}}</p> {{!-- additional album property --}}
+        </div>
+        <div class="col">
+            <p>{{label}}</p> {{!-- additional album property --}}
+        </div>
+        <div class="col">
+            <p>{{genre}}</p> {{!-- additional album property --}}
+        </div>
+        <div class="col-1">
+            <form action="/albums/{{_id}}" method="GET">
+                <button>Details</button>
+            </form>
+        </div>
+        <div class="col-1">
+            <form action="/albums/{{_id}}/edit" method="GET">
+                <button>Edit</button>
+            </form>
+        </div>
+        <div class="col-1">
+            <form action="/albums/{{_id}}/delete" method="POST">
+                <button>Delete</button>
+            </form> 
+        </div>
+    </div>
+</div>
 {{/each}}
