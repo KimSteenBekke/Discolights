@@ -21,9 +21,16 @@ we can iterate over it here with #each--}}
     <div class="col">
       <h3>Genre</h3>
     </div>
-    <div class="col-3">
-      <h3>action</h3>
+    <div class="col-1">   {{!-- to keep the headline above the data columns --}}
+      <h3>action</h3>     {{!-- one column with col-3 is no good at re-scaling --}}
     </div>
+    <div class="col-1">
+      <h3></h3>
+    </div>
+    <div class="col-1">
+      <h3></h3>
+    </div>
+
   </div>
 </div>
 
@@ -39,10 +46,10 @@ we can iterate over it here with #each--}}
             <p>{{artist}}</p> {{!-- additional album property --}}
         </div>
         <div class="col">
-            <p>{{label}}</p> {{!-- additional album property --}}
+            <p>{{label}}</p>  {{!-- additional album property --}}
         </div>
         <div class="col">
-            <p>{{genre}}</p> {{!-- additional album property --}}
+            <p>{{genre}}</p>  {{!-- additional album property --}}
         </div>
         <div class="col-1">
             <form action="/albums/{{_id}}" method="GET">

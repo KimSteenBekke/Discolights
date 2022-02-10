@@ -23,6 +23,7 @@ router.post('/albums/create', (req, res, next) => {
 router.get("/albums", (req, res, next) => {
   Album.find()
     .then((allTheAlbumsFromDB) => {
+    
       // -> allTheAlbumsFromDB is a placeholder, it can be any word
       console.log("Retrieved albums from DB:", allTheAlbumsFromDB);
 
