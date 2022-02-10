@@ -21,6 +21,8 @@ https://marvelapp.com/prototype/hh50i74
 7.	Album Edit
 8.	Album Delete
 
+Detailed user stories here: https://trello.com/c/0GLzGyKL
+
 ##**Setup:**
 
 No setup or installation is required to run the app in a browser. 
