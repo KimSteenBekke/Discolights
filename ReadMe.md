@@ -12,7 +12,7 @@ https://marvelapp.com/prototype/hh50i74
 
 ## **User Stories:**
 
-1.	User Sign up
+1.	As a user I want to able to sign up to the application: 
     1. User must be able to sign up at the "Log in"-screen
     2. User must provide a username
     3. User must provide a password
@@ -20,19 +20,19 @@ https://marvelapp.com/prototype/hh50i74
     5. Password must be encrypted
     6. User must return to "Home"-screen upon sign up
 
-2.	User Login
+2.	As a user I want to able to log in to the application:
     1. User must be able to access login via the "Log in"-button
     2. User must be able to login with username & password at the "Log in"-screen
     3. User name must be validated
     4. Password must be validated
     5. User must return to "Home"-screen upon login
 
-3.	User Logout
+3.	As a user I want to able to log out from the application:
     1. User must be able to logout pressing the "Log out"-button
     2. User must return to "Home"-screen upon logout
     3. User must be logged in to perform actions under feature 3
 
-4.	Album Create
+4.	As a user I want to able to create a new album in the application:
     1. User must be able to access create album via the "Create album"-button
     2. User must be able to create a new album at the "Create album"-screen
     3. The following fields must be available during registration:
@@ -45,7 +45,7 @@ https://marvelapp.com/prototype/hh50i74
        7. Track time
     4. User must be logged in to perform actions under feature 4
 
-5.	Album List
+5.	As a user I want to able to list albums in the application:
     1. User must be able to list albums via the "List of albums"-button
     2. User must be able to see the following album information:
        1. Title 
@@ -58,7 +58,7 @@ https://marvelapp.com/prototype/hh50i74
        3. Delete - delete the album
        4. User can perform actions under feature 5 without being logged in, except "Edit" and "Delete"
 
-6.	Album Details
+6.	As a user I want to able to see album details in the application:
     1. User must be able to go to "Album details" from the "List of albums"-screen
     2. User must be able to see the following album information:
        1. Title
@@ -67,7 +67,7 @@ https://marvelapp.com/prototype/hh50i74
        4. Genre
     3. User can perform actions under feature 6 without being logged
 
-7.	Album Edit
+7.	As a user I want to able to edit albums in the application:
     1. User must be able to go to "Edit album" from the "List of albums"-screen
     2. User must be able to edit the following album information:
        1. Title
@@ -76,7 +76,7 @@ https://marvelapp.com/prototype/hh50i74
        4. Genre
     3. User must be logged in to perform actions under feature 7
 
-8.	Album Delete
+8.	As a user I want to able to delete albums in the application:
     1. User must be able to delete the album from the "List of albums"-screen
     2. User must be logged in to perform actions under feature 8
 
