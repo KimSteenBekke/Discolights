@@ -13,8 +13,8 @@ https://marvelapp.com/prototype/hh50i74
 ## **User Stories:**
 
 1.	User Sign up
-    -User must be able to sign up at the "Log in"-screen
-    -User must provide a username
+    1. User must be able to sign up at the "Log in"-screen
+    2. User must provide a username
     -User must provide a password
     -Username must be validated
     -Password must be encrypted
