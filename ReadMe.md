@@ -126,8 +126,6 @@ No setup or installation is required to run the app in a browser.
 | POST     | "/albums/:albumId/delete" | delete the album                                                          |
 | -------- | ------------------------  | ----------------                                                          |
 
-## **Demo(Optional) (Screenshots or GIFs of the application):**
-
 ## **Project Link:**
 
 The app is deployed to Heroku and can be accessed from here:
