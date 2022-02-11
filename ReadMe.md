@@ -100,31 +100,18 @@ No setup or installation is required to run the app in a browser.
 ## **Server routes table(Method, Route or URL, Description as columns):**
 
 | Method   | Route                     | Description                                                               |
-| -------- | --------------------------| ------------------------------------------------------------------------- |
 | GET      | "/"                       | Go to home page                                                           |
-| -------- | -------                   | ---------------                                                           |
 | GET      | "/signup"                 | go to sign up page                                                        |
-| -------- | --------                  | ------------------                                                        |
 | POST     | "/signup"                 | create new user                                                           |
-| -------- | --------                  | ---------------                                                           |
 | GET      | "/login"                  | go to login page                                                          |
-| -------- | -------                   | ----------------                                                          |
 | POST     | "/login"                  | login user                                                                |
-| -------- | -------                   | ----------                                                                |
 | GET      | "/logout"                 | logout user                                                               |
-| -------- | --------                  | -----------                                                               |
 | GET      | "/albums/create"          | go to album create page                                                   |
-| -------- | ---------------           | -----------------------                                                   |
 | GET      | "/albums"                 | go to list albums page                                                    |
-| -------- | --------                  | ----------------------                                                    |
 | GET      | "/albums/:albumId"        | go to album details page                                                  |
-| -------- | -----------------         | ------------------------                                                  |
 | GET      | "/albums/:albumId/edit"   | go to album details                                                       |
-| -------- | ----------------------    | -------------------                                                       |
 | POST     | "/albums/:albumId/edit"   | edit the album                                                            |
-| -------- | ----------------------    | --------------                                                            |
 | POST     | "/albums/:albumId/delete" | delete the album                                                          |
-| -------- | ------------------------  | ----------------                                                          |
 
 ## **Demo(Optional) (Screenshots or GIFs of the application):**
 
