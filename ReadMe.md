@@ -15,70 +15,70 @@ https://marvelapp.com/prototype/hh50i74
 1.	User Sign up
     1. User must be able to sign up at the "Log in"-screen
     2. User must provide a username
-    -User must provide a password
-    -Username must be validated
-    -Password must be encrypted
-    -User must return to "Home"-screen upon sign up
+    3. User must provide a password
+    4. Username must be validated
+    5. Password must be encrypted
+    6. User must return to "Home"-screen upon sign up
 
 2.	User Login
-    -User must be able to access login via the "Log in"-button
-    -User must be able to login with username & password at the "Log in"-screen
-    -User name must be validated
-    -Password must be validated
-    -User must return to "Home"-screen upon login
+    1. User must be able to access login via the "Log in"-button
+    2. User must be able to login with username & password at the "Log in"-screen
+    3. User name must be validated
+    4. Password must be validated
+    5. User must return to "Home"-screen upon login
 
 3.	User Logout
-    -User must be able to logout pressing the "Log out"-button
-    -User must return to "Home"-screen upon logout
-    -User must be logged in to perform actions under feature 3
+    1. User must be able to logout pressing the "Log out"-button
+    2. User must return to "Home"-screen upon logout
+    3. User must be logged in to perform actions under feature 3
 
 4.	Album Create
-    -User must be able to access create album via the "Create album"-button
-    -User must be able to create a new album at the "Create album"-screen
-    -The following fields must be available during registration:
-        -Title
-        -Artist
-        -Label
-        -Genre
-        -Track sequence
-        -Track title
-        -Track time
-    -User must be logged in to perform actions under feature 4
+    1. User must be able to access create album via the "Create album"-button
+    2. User must be able to create a new album at the "Create album"-screen
+    3. The following fields must be available during registration:
+       1. Title
+       2. Artist
+       3. Label
+       4. Genre
+       5. Track sequence
+       6. Track title
+       7. Track time
+    4. User must be logged in to perform actions under feature 4
 
 5.	Album List
-    -User must be able to list albums via the "List of albums"-button
-    -User must be able to see the following album information:
-        -Title 
-        -Artist
-        -Label
-        -Genre
-    -User must be able to perform the following actions:
-        -Details - go to Album details
-        -Edit - go to Edit album
-        -Delete - delete the album
-    -User can perform actions under feature 5 without being logged in, except "Edit" and "Delete"
+    1. User must be able to list albums via the "List of albums"-button
+    2. User must be able to see the following album information:
+       1. Title 
+       2. Artist
+       3. Label
+       4. Genre
+    3. User must be able to perform the following actions:
+       1. Details - go to Album details
+       2. Edit - go to Edit album
+       3. Delete - delete the album
+       4. User can perform actions under feature 5 without being logged in, except "Edit" and "Delete"
 
 6.	Album Details
-     -User must be able to go to "Album details" from the "List of albums"-screen
-     -User must be able to see the following album information:
-        -Title
-        -Artist
-        -Label
-        -Genre
-    -User can perform actions under feature 6 without being logged
+    1. User must be able to go to "Album details" from the "List of albums"-screen
+    2. User must be able to see the following album information:
+       1. Title
+       2. Artist
+       3. Label
+       4. Genre
+    3. User can perform actions under feature 6 without being logged
 
 7.	Album Edit
-    -User must be able to go to "Edit album" from the "List of albums"-screen
-    -User must be able to edit the following album information:
-        -Title
-        -Artist
-        -Label
-        -Genre
-    -User must be logged in to perform actions under feature 7
+    1. User must be able to go to "Edit album" from the "List of albums"-screen
+    2. User must be able to edit the following album information:
+       1. Title
+       2. Artist
+       3. Label
+       4. Genre
+    3. User must be logged in to perform actions under feature 7
 
 8.	Album Delete
-    -User must be able to delete the album from the "List of albums"-screen
-    -User must be logged in to perform actions under feature 8
+    1. User must be able to delete the album from the "List of albums"-screen
+    2. User must be logged in to perform actions under feature 8
 
 ## **Setup:**
 
