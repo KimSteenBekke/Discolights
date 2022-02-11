@@ -23,16 +23,9 @@ router.post('/albums/create', (req, res, next) => {
 router.get("/albums", (req, res, next) => {
   Album.find()
     .then((allTheAlbumsFromDB) => {
-    
-      // -> allTheAlbumsFromDB is a placeholder, it can be any word
-      console.log("Retrieved albums from DB:", allTheAlbumsFromDB);
-
       res.render("albums/album-list.hbs", { albums: allTheAlbumsFromDB });
     })
     .catch((error) => {
-      console.log(`Error while getting the albums from the DB: ', ${error}`);
-
-      // Call the error-middleware to display the error page to the user
       next(error);
     });
 });
@@ -43,9 +36,6 @@ router.get("/albums", (req, res, next) => {
     Album.findById(albumId)
       .then(theAlbum => res.render('albums/album-details.hbs', { album: theAlbum }))
       .catch(error => {
-        console.log('Error while retrieving album details: ', error);
-   
-        // Call the error-middleware to display the error page to the user
         next(error);
       });
   });
@@ -55,7 +45,6 @@ router.get("/albums", (req, res, next) => {
 
     Album.findById(albumId)
       .then((albumToEdit) => {
-        // console.log(albumToEdit);
         res.render("albums/album-edit.hbs", { album: albumToEdit }); // <-- add this line
       })
       .catch((error) => next(error));

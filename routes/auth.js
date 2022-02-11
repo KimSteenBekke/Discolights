@@ -33,18 +33,6 @@ router.post("/signup", isLoggedOut,(req, res) => {
     });
   }
 
-  //   ! This use case is using a regular expression to control for special characters and min length
-  /*
-  const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-
-  if (!regex.test(password)) {
-    return res.status(400).render("signup", {
-      errorMessage:
-        "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
-    });
-  }
-  */
-
   // Search the database for a user with the username submitted in the form
   User.findOne({ username }).then((found) => {
     // If the user is found, send the message username is taken
@@ -101,7 +89,6 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       .status(400)
       .render("auth/login", { errorMessage: "Please provide your username." });
   }
-
   // Here we use the same logic as above
   // - either length based parameters or we check the strength of a password
   if (password.length < 8) {
@@ -109,7 +96,6 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       errorMessage: "Your password needs to be at least 8 characters long.",
     });
   }
-
   // Search the database for a user with the username submitted in the form
   User.findOne({ username })
     .then((user) => {
@@ -137,7 +123,6 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       // in this case we are sending the error handling to the error handling middleware that is defined in the error handling file
       // you can just as easily run the res.status that is commented out below
       next(err);
-      // return res.status(500).render("login", { errorMessage: err.message });
     });
 });
 
