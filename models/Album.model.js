@@ -11,7 +11,7 @@ const album = new Schema(
     title: String,
     artist: String,
     label: String,
-    catalog: String
+    catalog: String,
     genre: String,
     tracks: [track],
   },
