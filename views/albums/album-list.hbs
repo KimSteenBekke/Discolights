@@ -1,0 +1,62 @@
+{{!-- views/albums/album-list.hbs --}}
+{{!-- general nav bar settings from layout.hbs --}}
+<br>
+<h1>Album List</h1>
+<br>
+
+{{!-- since we passed allTheAlbumsFromDB as `albums`,
+we can iterate over it here with #each--}}
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-5">
+      <h3>Title</h3>
+    </div>
+    <div class="col">
+      <h3>Artist</h3>
+    </div>
+    <div class="col">
+      <h3>Label</h3>
+    </div>
+    <div class="col">
+      <h3>Genre</h3>
+    </div>
+    
+</div>
+
+
+
+{{#each albums}}
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <p>{{title}}</p>
+        </div>
+        <div class="col">
+            <p>{{artist}}</p>
+        </div>
+        <div class="col">
+            <p>{{label}}</p>  
+        </div>
+        <div class="col">
+            <p>{{genre}}</p> 
+        </div>
+        <div class="col-1">
+            <form action="/albums/{{_id}}" method="GET">
+                <button>Details</button>
+            </form>
+        </div>
+        <div class="col-1">
+            <form action="/albums/{{_id}}/edit" method="GET">
+                <button>Edit</button>
+            </form>
+        </div>
+        <div class="col-1">
+            <form action="/albums/{{_id}}/delete" method="POST">
+                <button type="button" class="btn btn-danger">Danger</button>
+            </form> 
+        </div>
+    </div>
+</div>
+{{/each}}
